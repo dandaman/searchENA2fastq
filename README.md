@@ -1,5 +1,5 @@
 # searchENA2fastq
-Small Snakemake workflow to search the [European Nucleotide Archive](http://www.ebi.ac.uk/ena) and download the corresponding [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) files.
+Small [snakemake](https://snakemake.readthedocs.io/en/stable/) workflow to search the [European Nucleotide Archive](http://www.ebi.ac.uk/ena) and download the corresponding [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) files.
 ## Installation
 The easiest way to go is install Anaconda or Miniconda and create an environment as follows:
 ```bash 
