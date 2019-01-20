@@ -14,6 +14,8 @@ conda install -c anaconda wget
 ```
 
 ## Usage
+![ENA Advanced Search Report](ENA_report.png "ENA Advanced Search Report")
+
 This is still a bit of a hack - in order to use this workflow, (as of 01/20/2019) you have to: 
 1. Go to the [ENA Advanced Search](https://www.ebi.ac.uk/ena/data/warehouse/search)
 2. Select the domain `Read`
