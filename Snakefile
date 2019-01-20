@@ -1,3 +1,6 @@
+import warnings
+from pathlib import Path
+import os.path
 import pandas as pd
 import urllib 
 import requests
@@ -45,3 +48,22 @@ rule query_ENA:
 				with open(filename, 'w') as f:
 					f.write("ftp://%s\n" % item)
 				counter+=1
+onsuccess:
+	d=pd.read_csv(query_result_file,sep="\t")
+	c=0
+	C=0
+	missing=list()
+	for i,r in d.iterrows():
+		for f in r.fastq_ftp.rstrip(";").split(";"):
+			F=os.path.basename(f)
+			filename="{fastq_path}/{file}".format(fastq_path=fastq_path,file=F)
+			p=Path(filename)
+			if p.exists():
+				c+=1
+			else:
+				missing.append("ftp://{url}".format(url=f))
+			C+=1
+	print("{downloaded}/{total} files downloaded!".format(downloaded=c,total=C))
+	if len(missing)>0:
+		print("The following URLs are missing:")
+		print("\n".join(missing))
