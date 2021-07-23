@@ -1,5 +1,12 @@
 # searchENA2fastq
 Small [snakemake](https://snakemake.readthedocs.io/en/stable/) workflow to search the [European Nucleotide Archive](http://www.ebi.ac.uk/ena) and download the corresponding [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) files.
+
+
+The version used for the DEK1 analysis:
+[![DOI](https://zenodo.org/badge/166648768.svg)](https://zenodo.org/badge/latestdoi/166648768)
+
+
+
 ## Installation
 The easiest way to go is install Anaconda or Miniconda and create an environment as follows:
 ```bash 
